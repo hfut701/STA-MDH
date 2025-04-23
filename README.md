@@ -30,12 +30,12 @@ The three datasets used in our paper are all public datasets. You can download t
 
 - **CrossCheck Dataset**  
   - Download: [https://www.mh4mh.org/eureka-data](https://www.mh4mh.org/eureka-data)  
-  - Description: Contains annotated question-answer pairs from mental health forums, with expert-labeled usefulness scores and user comments. Used to train the model's comment-based relevance detection module.  
+  - Description: The CrossCheck dataset encompasses six categories of behaviors: physical behavior, dialogue behavior, mobile phone call behavior, displacement behavior, text message behavior, and mobile phone use behavior. 
 
 - **Oxford Parkinson's Telemonitoring Dataset**  
   - Download: [https://archive.ics.uci.edu/dataset/189/parkinsons+telemonitoring](https://archive.ics.uci.edu/dataset/189/parkinsons+telemonitoring)  
-  - Description: Includes biomedical voice measurements from Parkinson's patients. We utilized its structured metadata to validate the model's ability to handle heterogeneous data features.  
+  - Description: The Oxford dataset focuses on the vocal characteristics of Parkinson’s disease (PD) patients, encompassing features such as pitch, volume, periodic variation, and nonlinear dynamics.
 
 - **PPMI (Parkinson's Progression Markers Initiative) Dataset**  
   - Download: [https://www.ppmi-info.org/access-data-specimens/data](https://www.ppmi-info.org/access-data-specimens/data)  
-  - Description: Longitudinal clinical and imaging data for Parkinson's research. Applied in our cross-domain experiments to test the framework's generalization capability.  
+  - Description:The PPMI dataset is a comprehensive medical database encompassing multimodal data, including clinical records, medical imaging, multi-omics analyses, genetic information, sensor monitoring data, and biomarker measurements. In this study, to align with mobile health monitoring scenarios, we specifically extracted physiological data of Parkinson’s disease patients collected via wearable devices. These data cover key dimensions such as motor function metrics, heart rate variability parameters, and sleep behavior patterns.
