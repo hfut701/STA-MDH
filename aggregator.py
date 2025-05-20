@@ -186,19 +186,18 @@ def graph_dic(models_dic, pre_A, args):
 
         # Find the top 15 similar matrices for each category
         if args.dataset =='ppmi':
-            top_k_fea = np.argsort(dist_metrix_fea1, axis=1)[:, :40]
-            top_k_time = np.argsort(dist_metrix_time1, axis=1)[:, :40]
-            top_k_predict = np.argsort(dist_metrix_predict1, axis=1)[:, :40]
+             top_k_fea = [np.where(row > 0.8)[0] for row in dist_metrix_fea1]
+             top_k_time = [np.where(row > 0.8)[0] for row in dist_metrix_time1]
+             top_k_predict = [np.where(row > 0.8)[0] for row in dist_metrix_predict1]
         else:
             if args.dataset =='park':
-                top_k_fea = np.argsort(dist_metrix_fea1, axis=1)[:, :15]
-                top_k_time = np.argsort(dist_metrix_time1, axis=1)[:, :15]
-                top_k_predict = np.argsort(dist_metrix_predict1, axis=1)[:, :15]
+                top_k_fea = [np.where(row > 0.8)[0] for row in dist_metrix_fea1]
+                top_k_time = [np.where(row > 0.8)[0] for row in dist_metrix_time1]
+                top_k_predict = [np.where(row > 0.8)[0] for row in dist_metrix_predict1]
             else:
-                top_k_fea = np.argsort(dist_metrix_fea1, axis=1)[:, :15]
-                top_k_time = np.argsort(dist_metrix_time1, axis=1)[:, :15]
-                top_k_predict = np.argsort(dist_metrix_predict1, axis=1)[:, :15]
-
+                top_k_fea = [np.where(row > 0.8)[0] for row in dist_metrix_fea1]
+                top_k_time = [np.where(row > 0.8)[0] for row in dist_metrix_time1]
+                top_k_predict = [np.where(row > 0.8)[0] for row in dist_metrix_predict1]
 
 
         dist_metrix_fea = torch.zeros((len(param_metrix_fea), len(param_metrix_fea)))
