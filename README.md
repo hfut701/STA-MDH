@@ -19,7 +19,7 @@ This is our implementation for the paper:
 
 ## Example to Run the Codes  
 
-Run the following command to train the CUFAIR model on the StackExchange dataset:  
+Run the following command to train the model on the PPMI dataset:  
 
 ```bash
 python main.py --dataset ppmi --lr 0.01 --device cuda:1 --batch_size 128 --epoch 20 --client_frac 1 --model our
